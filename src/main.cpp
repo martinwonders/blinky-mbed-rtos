@@ -13,11 +13,13 @@ DigitalOut   blue(LED3,1); /* initialise blue led off */
 
 void flash_red(void)
 {
-	while(true) {
+        int counter = 10;
+	while(counter) {
 		red = 0;
 		wait(0.3);
                 red = 1;
 		wait(0.6);
+                counter--;
 	}
 }
 
@@ -49,6 +51,6 @@ int main(void)
 	blink_red.start(flash_red);
         blink_green.start(flash_green);
         blink_blue.start(flash_blue);
-	blink_red.join();
+        blink_red.join(); /*main() will end when counter==0*/
 }
 

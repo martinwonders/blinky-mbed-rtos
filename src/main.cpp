@@ -6,9 +6,9 @@
 #include <mbed.h>
 
 DigitalOut   rLED_as(D5,1); /* initialise app shield red led off */
-DigitalOut   red(LED1,1); /* initialise to 1 = off */
-DigitalOut   green(LED2,1); /* initialise app shield green led off */
-DigitalOut   blue(LED3,1); /* initialise app shield green led off */
+DigitalOut   red(LED1,1); /* initialise red led to 1 = off */
+DigitalOut   green(LED2,1); /* initialise green led off */
+DigitalOut   blue(LED3,1); /* initialise blue led off */
 
 
 void flash_red(void)

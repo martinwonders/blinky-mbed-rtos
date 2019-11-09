@@ -51,6 +51,7 @@ int main(void)
 	blink_red.start(flash_red);
         blink_green.start(flash_green);
         blink_blue.start(flash_blue);
-        blink_red.join(); /*main() will end when counter==0*/
+        blink_red.join(); /*main() would end when counter==0*/
+        blink_green.join(); /*if it wasn't waiting for flash_green to end*/
 }
 
